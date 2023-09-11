@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ProjectFTP</string>
+    <string name="cam">Ambil gambar</string>
+    <string name="pic">Pilih gambar</string>
+    <string name="eng">Bahasa Indonesia</string>
+    <string name="calculate">Hitung</string>
+    <string name="preview">Tinjauan</string>
+    <string name="back">Kembali</string>
+    <string name="share">Bagikan</string>
+    <string name="save">Simpan</string>
+    <string name="result">Hasil</string>
+    <string name="camera">Camera</string>
+    <string name="permit">Cannot get permission</string>
+    <string name="title1">Chlorella</string>
+    <string name="title2">Spirulina</string>
+    <string name="result1">Microalgae</string>
+    <string name="result2">Ukuran</string>
+    <string name="result3">Kepadatan</string>
+    <string name="headline">Deteksi mikroalga hanya sekali klik!!</string>
+
+    <string name="title">Dokumen Hasil Scan</string>
+</resources>

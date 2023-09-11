@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ProjectFTP</string>
+    <string name="cam">Take a photo</string>
+    <string name="pic">Insert Picture</string>
+    <string name="eng">English</string>
+    <string name="calculate">Calculate</string>
+    <string name="preview">Preview</string>
+    <string name="back">Back</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <string name="result">Result</string>
+    <string name="camera">Camera</string>
+    <string name="permit">Cannot get permission</string>
+    <string name="title1">Chlorella</string>
+    <string name="title2">Spirulina</string>
+    <string name="result1">Microalgae</string>
+    <string name="result2">Size</string>
+    <string name="result3">Density</string>
+    <string name="headline">Define microalgae with just one click!</string>
+
+    <string name="title">Scan Result Document</string>
+</resources>
