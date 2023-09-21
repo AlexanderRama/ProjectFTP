@@ -5,12 +5,14 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32"  />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
@@ -27,7 +29,13 @@
         android:theme="@style/Theme.ProjectFTP"
         tools:targetApi="31">
         <activity
+            android:name=".HomepageActivity2"
+            android:exported="false" />
+        <activity
             android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity2"
             android:exported="false" />
         <activity
             android:name=".Preview2"
@@ -46,6 +54,17 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="takepdf"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths2">
+            </meta-data>
+        </provider>
+
         <activity
             android:name=".HomepageActivity"
             android:exported="true">
@@ -57,8 +76,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

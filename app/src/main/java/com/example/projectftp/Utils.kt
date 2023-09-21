@@ -98,7 +98,7 @@ fun uriToFile(selectedImage: Uri, context: Context): File {
     return myFile
 }
 
-fun createPDF(data: ArrayList<ScanResponse>, photo: String, context: Context) {
+fun createPDF(photo: Bitmap, context: Context, text: String) {
     val pdfpath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).toString()
     val file = File(pdfpath, "scanresult.pdf")
     val writer = PdfWriter(file)
@@ -107,43 +107,18 @@ fun createPDF(data: ArrayList<ScanResponse>, photo: String, context: Context) {
     pdfDocument.defaultPageSize = PageSize.A4
     document.setMargins(44f, 44f, 44f, 44f)
 
-    val bitmap = BitmapFactory.decodeFile(photo)
     val stream = ByteArrayOutputStream()
-    bitmap.compress(Bitmap.CompressFormat.JPEG, 30, stream)
+    photo.compress(Bitmap.CompressFormat.JPEG, 30, stream)
     val bitmapData = stream.toByteArray()
     val imageData: ImageData = ImageDataFactory.create(bitmapData)
     val image = Image(imageData)
-
+    image.scaleToFit(800f, 700f)
+    image.setHorizontalAlignment(HorizontalAlignment.CENTER)
     val title = Paragraph(context.getString(R.string.title)).setBold().setFontSize(24f).setTextAlignment(TextAlignment.CENTER)
-    val headline1 = Paragraph(context.getString(R.string.title1) ).setFontSize(14f).setTextAlignment(
-        TextAlignment.LEFT)
-    val headline2 = Paragraph(context.getString(R.string.title2)).setFontSize(14f).setTextAlignment(
-        TextAlignment.LEFT)
-    val width = floatArrayOf(200f, 200f)
-//    val table = Table(width)
-//    table.setHorizontalAlignment(HorizontalAlignment.CENTER)
-//    table.addCell(Cell().add(Paragraph(context.getString(R.string.result1))))
-//    table.addCell(Cell().add(Paragraph(data[0])))
-//    table.addCell(Cell().add(Paragraph(context.getString(R.string.result2))))
-//    table.addCell(Cell().add(Paragraph(data[0].place + data[0].date)))
-//    table.addCell(Cell().add(Paragraph(context.getString(R.string.result3))))
-//    table.addCell(Cell().add(Paragraph(data[0].email)))
-//
-//    val table2 = Table(width)
-//    table2.setHorizontalAlignment(HorizontalAlignment.CENTER)
-//    table2.addCell(Cell().add(Paragraph(context.getString(R.string.result1))))
-//    table2.addCell(Cell().add(Paragraph(data[0].name)))
-//    table2.addCell(Cell().add(Paragraph(context.getString(R.string.result2))))
-//    table2.addCell(Cell().add(Paragraph(data[0].place + data[0].date)))
-//    table2.addCell(Cell().add(Paragraph(context.getString(R.string.result3))))
-//    table2.addCell(Cell().add(Paragraph(data[0].email)))
-
+    val headline1 = Paragraph(text).setFontSize(20f).setTextAlignment(
+        TextAlignment.CENTER).setPaddingBottom(12f)
     document.add(title)
-    document.add(image)
     document.add(headline1)
-//    document.add(table)
-//    document.add(headline2)
-//    document.add(table2)
-
+    document.add(image)
     document.close()
 }

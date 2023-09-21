@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.projectftp.databinding.ActivityHomepageBinding
 import java.io.File
+import java.io.FileInputStream
 
 class HomepageActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomepageBinding

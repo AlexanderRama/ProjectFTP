@@ -52,12 +52,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/picture"
             android:layout_width="280dp"
             android:layout_height="280dp"
             android:layout_marginTop="44dp"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
+            app:saturation="1.0"
+            app:contrast="1.0"
+            app:brightness="1.0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -67,6 +70,7 @@
         android:id="@+id/title1"
         android:layout_width="280dp"
         android:layout_height="40dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/quicksandbold"
         android:text="@string/title1"
         android:textAlignment="textStart"
@@ -81,9 +85,10 @@
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:fontFamily="@font/quicksandbold"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textColor="@color/green"
         android:textSize="24sp"
+        android:text="3"
         app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
 
@@ -105,9 +110,10 @@
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:fontFamily="@font/quicksandbold"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textColor="@color/green"
         android:textSize="24sp"
+        android:text="2-23"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
@@ -129,9 +135,10 @@
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:fontFamily="@font/quicksandbold"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textColor="@color/green"
         android:textSize="24sp"
+        android:text="21%"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
 
@@ -146,87 +153,87 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/result3" />
 
-    <TextView
-        android:id="@+id/title2"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/quicksandbold"
-        android:text="@string/title2"
-        android:textAlignment="textStart"
-        android:textColor="@color/green"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+<!--    <TextView-->
+<!--        android:id="@+id/title2"-->
+<!--        android:layout_width="280dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:fontFamily="@font/quicksandbold"-->
+<!--        android:text="@string/title2"-->
+<!--        android:textAlignment="textStart"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="24sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView6" />-->
 
-    <TextView
-        android:id="@+id/result4"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/quicksandbold"
-        android:textAlignment="textStart"
-        android:textColor="@color/green"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/title2" />
+<!--    <TextView-->
+<!--        android:id="@+id/result4"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:fontFamily="@font/quicksandbold"-->
+<!--        android:textAlignment="textStart"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="24sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/title2" />-->
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:fontFamily="@font/quicksandsemibold"
-        android:text="@string/result2"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/result5" />
+<!--    <TextView-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:fontFamily="@font/quicksandsemibold"-->
+<!--        android:text="@string/result2"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/result5" />-->
 
-    <TextView
-        android:id="@+id/result5"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/quicksandbold"
-        android:textAlignment="textStart"
-        android:textColor="@color/green"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/title2" />
+<!--    <TextView-->
+<!--        android:id="@+id/result5"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:fontFamily="@font/quicksandbold"-->
+<!--        android:textAlignment="textStart"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="24sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/title2" />-->
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:fontFamily="@font/quicksandsemibold"
-        android:text="@string/result1"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/result4" />
+<!--    <TextView-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:fontFamily="@font/quicksandsemibold"-->
+<!--        android:text="@string/result1"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/result4" />-->
 
-    <TextView
-        android:id="@+id/result6"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/quicksandbold"
-        android:textAlignment="textStart"
-        android:textColor="@color/green"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/title2" />
+<!--    <TextView-->
+<!--        android:id="@+id/result6"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:fontFamily="@font/quicksandbold"-->
+<!--        android:textAlignment="textStart"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="24sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/title2" />-->
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:fontFamily="@font/quicksandsemibold"
-        android:text="@string/result3"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/result6" />
+<!--    <TextView-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:fontFamily="@font/quicksandsemibold"-->
+<!--        android:text="@string/result3"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/result6" />-->
 
     <LinearLayout
         android:id="@+id/share"
